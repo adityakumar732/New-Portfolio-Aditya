@@ -39,7 +39,7 @@ const Hero = () => {
     }
 
     if (!isDeleting && currentRole === current) {
-      setTimeout(() => setIsDeleting(true), 5000); // Pause before deleting
+      setTimeout(() => setIsDeleting(true), 7000); // Pause before deleting
     } else if (isDeleting && currentRole === '') {
       setIsDeleting(false);
       setLoop((prev) => prev + 1); // Move to the next role
