@@ -1,5 +1,5 @@
 import React from 'react'
-import Github from '../assets/Github.png'
+import GitHub from'../assets/GitHub.png'
 
 const Cards = ({ item }) => {
     return (
@@ -12,7 +12,7 @@ const Cards = ({ item }) => {
                     <button className='bg-red-500 text-white px-3 py-2 rounded-md'><a href={item.live} target='_blank'>Live Preview</a></button>
                     <button className='bg-black text-white px-3 py-2 rounded-md'>
                         <a href={item.github} target='_blank' className='flex gap-1'>
-                            <img src={Github} alt="" className='w-6' />
+                            <img src={GitHub} alt="" className='w-6' />
                             Github Link
                         </a>
                     </button>

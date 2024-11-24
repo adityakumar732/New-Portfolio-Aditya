@@ -8,9 +8,9 @@ import contact from '../assets/Contact.json'
 const Contact = () => {
   return (
     <section id='contact' className='z-50 bg-gray-800 relative py-10 px-5 md:px-0'>
-      <div className='mb-16 max-w-7xl mx-auto'>
-        <div className='flex flex-col md:flex-row justify-between items-center'>
-            <div className='md:w-1/2 mb-8 ml-2 md:mb-0'>
+      <div className='mb-16  max-w-7xl mx-auto'>
+        <div className='flex flex-col  md:flex-row justify-between items-center'>
+            <div className='md:w-1/2  mb-8 ml-2 md:mb-0'>
               <h2 className='text-3xl font-bold mb-3 text-red-500'>Get in Touch</h2>
               <p className='mb-4 text-white/85'>I'm always open to new opportunities and collaboration. Feel free to reach out!</p>
               <div className='flex space-x-4'>
