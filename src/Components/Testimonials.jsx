@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React from 'react';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -6,62 +6,48 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 
-
-
 // import required modules
 import { Autoplay, Pagination } from 'swiper/modules';
-import { Quote, Star } from 'lucide-react';
+import { Quote, Rocket, Zap, Users, Layers, Eye } from 'lucide-react';
 
 const Testimonials = () => {
 
-    const testimonials = [
+    const points = [
         {
             id: 1,
-            name: "Harish G ",
-            rating: 4,
-            text: "“Aditya Kumar portfolio showcases strong technical skills and attention to detail. Their ability to create functional, responsive designs with ReactJS and TailwindCSS is impressive for a fresher.”",
-            trainer: 'Reactjs Trainer'
+            icon: Rocket,
+            title: 'Ships Production Code',
+            text: "I build and maintain a live hotel room booking platform at INNsight — not practice projects, real features used by real users."
         },
         {
             id: 2,
-            name: "Shameer Chouragasti",
-            rating: 5,
-            text: "“The Spicy Bites webpage showcases an impressive understanding of front-end technologies. The responsive design and mobile optimization and the attention to detail, makes this project stand out.”",
-            trainer: 'Web Development Trainer'
+            icon: Zap,
+            title: 'Fast Learner, Faster Shipper',
+            text: "From JSpiders training to shipping production features at INNsight in a short span — I pick up new tools quickly and put them to work immediately."
         },
         {
             id: 3,
-            name: "Gaurav Yadav",
-            rating: 4,
-            text: "“The Netflix clone project demonstrates great attention to detail. I was impressed with the seamless integration and styling really showcases understanding of modern web development tools.”",
-            trainer: 'Web Development Trainer'
+            icon: Users,
+            title: 'Client-Facing Ownership',
+            text: "I handle daily UI updates against real client requirements inside Agile sprints — not just writing code, but owning outcomes end to end."
         },
         {
             id: 4,
-            name: "Harshita N",
-            rating: 5,
-            text: "“The OYO clone project demonstrates ability to replicate real-world application features with precision. This project clearly reflects skills in building scalable and intuitive applications.”",
-            trainer: 'Frontend Trainer'
+            icon: Layers,
+            title: 'Full-Stack Capable',
+            text: "Beyond UI, I've built complete MERN applications like SwiftShop — JWT authentication, admin dashboards, and REST APIs included."
         },
         {
             id: 5,
-            name: "Muthana Sreenivas",
-            rating: 4,
-            text: "“The Tesla webpage project reflects attention to detail in UI/UX design. From smooth animations to the strategic use of images, it’s clear that understands the importance of creating a seamless user experience.”",
-            trainer: 'MERN Stack Developer'
+            icon: Eye,
+            title: 'Detail-Oriented by Habit',
+            text: "From WAVE accessibility audits to cross-device testing, I catch the small things that make an interface actually work for everyone."
         },
-        {
-            id: 6,
-            name: "Shweta K",
-            rating: 4,
-            text: "“The Tic Tac Toe game project showcases solid grasp of JavaScript fundamentals. The code is clean and well-structured, and the gameplay and interactive elements using just HTML, CSS, and JavaScript.”",
-            trainer: 'Frontend Developer'
-        }
     ]
 
     return (
         <div id='testimonials' className='py-10 bg-gray-100 relative' >
-            <h1 className='text-center text-2xl lg:text-4xl font-bold'>What My Mentors Say</h1>
+            <h1 className='text-center text-2xl lg:text-4xl font-bold'>Why Work With Me</h1>
             <div className='max-w-6xl mx-auto py-10 px-5'>
                 <Swiper
                     style={{
@@ -88,34 +74,18 @@ const Testimonials = () => {
                         type: "bullets",
                         clickable: true,
                     }}
-                    className="mySwiper"
+                    className="mySwiper !items-stretch"
                 >
-                    {testimonials.map((item) => {
-                        return <SwiperSlide key={item.id}>
-                            <div className='border border-gray-400 shadow-md shadow-red-500 rounded-lg flex flex-col p-4'>
-                                {item.rating === 4 ? (
-                                    <div className='flex'>
-                                        <Star fill='true' />
-                                        <Star fill='true' />
-                                        <Star fill='true' />
-                                        <Star fill='true' />
-                                        <Star />
-                                    </div>
-                                ) : (
-                                    <div className='flex'>
-                                        <Star fill='true' />
-                                        <Star fill='true' />
-                                        <Star fill='true' />
-                                        <Star fill='true' />
-                                        <Star fill='true' />
-                                    </div>
-                                )}
-                                <p className='py-3'>{item.text}</p>
-                                <div className='flex justify-between items-center'>
-                                    <div>
-                                        <h3 className='font-semibold text-red-500 text-lg'>{item.name}</h3>
-                                        <p className='text-sm mt-1'>{item.trainer}</p>
-                                    </div>
+                    {points.map((item) => {
+                        const Icon = item.icon
+                        return <SwiperSlide key={item.id} className='!h-auto'>
+                            <div className='border border-gray-400 shadow-md shadow-red-500 rounded-lg flex flex-col p-4 h-full'>
+                                <div className='flex'>
+                                    <Icon className='text-red-500' />
+                                </div>
+                                <h3 className='font-semibold text-red-500 text-lg py-3'>{item.title}</h3>
+                                <p className='flex-grow'>{item.text}</p>
+                                <div className='flex justify-end items-center mt-3'>
                                     <Quote className='text-red-400' />
                                 </div>
                             </div>
