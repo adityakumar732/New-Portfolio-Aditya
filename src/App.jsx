@@ -7,18 +7,38 @@ import Footer from './Components/Footer'
 import About from './Components/About'
 import Contact from './Components/Contact'
 import Navbar from './Components/Navbar'
+import FadeIn from './Components/FadeIn'
+
 
 const App = () => {
   return (
     <>
       <ParticleBackground />
       <Navbar />
-      <Hero />
-      <About/>
-      <Projects/>
-      <Testimonials/>
-      <Contact/>
-      <Footer/>
+      
+      <FadeIn>
+        <Hero />
+      </FadeIn>
+
+      <FadeIn>
+        <About />
+      </FadeIn>
+
+      <FadeIn>
+        <Projects />
+      </FadeIn>
+
+      <FadeIn>
+        <Testimonials />
+      </FadeIn>
+
+      <FadeIn>
+        <Contact />
+      </FadeIn>
+
+      <FadeIn>
+        <Footer />
+      </FadeIn>
     </>
   )
 }

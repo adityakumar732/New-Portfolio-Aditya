@@ -6,7 +6,7 @@ import OYO from '../assets/OYO.jpeg'
 import Tesla from '../assets/Tesla.jpeg'
 import Game from '../assets/Game.jpeg'
 import Cards from './Cards'
-
+import FadeIn from './FadeIn'
 
 const Projects = () => {
 
@@ -60,8 +60,12 @@ const Projects = () => {
       <div className='mb-16 max-w-7xl mx-auto'>
         <h2 className='text-3xl font-bold mb-8 text-red-500 border-b border-red-500 w-max pb-4'>My Projects</h2>
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-items-center gap-10'>
-            {projectJson.map((items)=> {
-                return <Cards item={items}/>
+            {projectJson.map((items, index) => {
+              return (
+                <FadeIn key={items.title} delay={index * 150}>
+                  <Cards item={items} />
+                </FadeIn>
+              )
             })}
         </div>
       </div>
