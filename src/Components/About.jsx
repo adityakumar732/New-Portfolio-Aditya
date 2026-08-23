@@ -35,7 +35,7 @@ const About = () => {
             </FadeIn>
 
             <FadeIn delay={200}>
-              <p className='mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto'>
+             <p className='mt-4 max-w-2xl text-xl text-gray-500 text-left min-[992px]:text-center min-[992px]:mx-auto'>
                 A UI Engineer with 1.5+ years of professional experience building
                 responsive, user-focused web interfaces using React.js and modern
                 frontend technologies.

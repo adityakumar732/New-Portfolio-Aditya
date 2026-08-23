@@ -5,6 +5,7 @@ import instagram from '../assets/instagram.png'
 import linkedin from '../assets/linkedin.png'
 import reactLogo from '../assets/React.png'
 import reduxLogo from '../assets/Redux.png'
+import Resume from '../assets/Aditya_Kumar_UI_Engineer.pdf'
 import tailwind from '../assets/Tailwind Css.png'
 import { useState, useEffect, useRef } from 'react'
 import FadeIn from './FadeIn'
@@ -91,7 +92,7 @@ useEffect(() => {
   <FadeIn delay={300}>
     <button className='bg-black text-white px-3 py-2 w-max rounded-md hover:bg-red-500'>
      <a
-        href="https://drive.google.com/uc?export=download&id=1XmP3qlxhjITFAnOLIIvNNi88zzehKAJN"
+        href={Resume}
         target="_blank"
       >
         Download CV
